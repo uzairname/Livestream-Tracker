@@ -137,12 +137,8 @@ function authenticate() {
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
         .then(function() {
             console.log("Sign-in successful");
-            document.getElementById("signin-text").innerHTML = "Sign in successful";
-            document.getElementById("signin-text").style.color = "green";
         }, function(err) {
             console.error("Error signing in", err);
-            document.getElementById("signin-text").innerHTML = "Error signing in";
-            document.getElementById("signin-text").style.color = "red";
         });
 }
 
