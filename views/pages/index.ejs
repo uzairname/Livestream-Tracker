@@ -8,6 +8,25 @@
 
   <% include ../partials/nav.ejs %>
 
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3 col-lg-1" style="padding:5px">Time interval: </div> <input type="text" id="time-interval" value="1" placeholder="time interval (seconds)" style="padding:5px"/>
+      <br>
+      <div class="col-xs-6 col-sm-3 col-lg-1" style="padding:5px">Total time: </div> <input type="text" id="total-time" value="12" placeholder="total time (minutes)" style="padding:5px"/>
+      <br>
+      <h5 id="info-text"></h5>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-3" style="padding: 10px; background-color:#d0e7c5"> <h6 id="times" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif"></h6> </div>
+      <div class="col-sm-6 col-lg-3" style="padding: 10px; background-color:#c6b4a6"> <h6 id="values" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif"></h6> </div>
+    </div>
+  </div>
+
+
+
+
+
 <div class="jumbotron text-center">
   <div class="container">
     <a href="/" class="lang-logo">
