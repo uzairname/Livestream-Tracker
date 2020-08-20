@@ -132,6 +132,10 @@ express()
 
 //======================================================================================
 
+function hi () {
+    console.log("hiii");
+}
+
 function authenticate() {
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
