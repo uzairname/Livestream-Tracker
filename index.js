@@ -10,7 +10,7 @@ express()
     .get('/', (req, res) => res.render('pages/index'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-
+//
 // var fs = require('fs');
 // var readline = require('readline');
 // var {google} = require('googleapis');
@@ -133,39 +133,39 @@ express()
 
 //======================================================================================
 
-function hi () {
-    console.log("hiii");
-}
-
-function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
-        .then(function() {
-            console.log("Sign-in successful");
-        }, function(err) {
-            console.error("Error signing in", err);
-        });
-}
-
-function loadClient() {
-    gapi.client.setApiKey("AIzaSyChuEvw1Ii6dMd2dhYlPfLCH49jtRe-CZk");
-    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() {
-            console.log("GAPI client loaded for API");
-        }, function(err) {
-            console.error("Error loading GAPI client for API", err);
-        });
-}
-
-// Make sure the client is loaded and sign-in is complete before calling this method.
-function execute() {
-    return gapi.client.youtube.videos.list({
-        "part": ["liveStreamingDetails"],
-        "id": ["PL-GXzQU_x0"]
-    }).then(function(response) {
-        console.log(response);
-
-    }, function(err) {
-        console.error("Error in API request", err);
-    });
-}
+// function hi () {
+//     console.log("hiii");
+// }
+//
+// function authenticate() {
+//     return gapi.auth2.getAuthInstance()
+//         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
+//         .then(function() {
+//             console.log("Sign-in successful");
+//         }, function(err) {
+//             console.error("Error signing in", err);
+//         });
+// }
+//
+// function loadClient() {
+//     gapi.client.setApiKey("AIzaSyChuEvw1Ii6dMd2dhYlPfLCH49jtRe-CZk");
+//     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+//         .then(function() {
+//             console.log("GAPI client loaded for API");
+//         }, function(err) {
+//             console.error("Error loading GAPI client for API", err);
+//         });
+// }
+//
+// // Make sure the client is loaded and sign-in is complete before calling this method.
+// function execute() {
+//     return gapi.client.youtube.videos.list({
+//         "part": ["liveStreamingDetails"],
+//         "id": ["PL-GXzQU_x0"]
+//     }).then(function(response) {
+//         console.log(response);
+//
+//     }, function(err) {
+//         console.error("Error in API request", err);
+//     });
+// }
