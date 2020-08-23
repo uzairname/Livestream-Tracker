@@ -1,5 +1,3 @@
-import * as gapi from "googleapis";
-
 function hi () {
     console.log("hhiiii");
 }
