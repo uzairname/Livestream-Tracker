@@ -8,9 +8,43 @@
 <body>
 
 
-<div class="container-fluid">
-    <button onclick="hi()">authorize and load</button>
-</div>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="js/main.js"></script>
+
+    <h4 id="signin-text"> </h4>
+    <button onclick="authenticate().then(loadClient)">authorize and load</button>
+    <button onclick="toggleClicked()" id="startstop">start</button>
+    <button onclick="document.getElementById('times').innerHTML = ''; document.getElementById('values').innerHTML = ''">clear</button>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-lg-1" style="padding:5px">Time interval: </div> <input type="text" id="time-interval" value="1" placeholder="time interval (seconds)" style="padding:5px"/>
+            <br>
+            <div class="col-xs-6 col-sm-3 col-lg-1" style="padding:5px">Total time: </div> <input type="text" id="total-time" value="12" placeholder="total time (minutes)" style="padding:5px"/>
+            <br>
+            <h5 id="info-text"></h5>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-3" style="padding: 10px; background-color:#d0e7c5"> <h6 id="times" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif"></h6> </div>
+            <div class="col-sm-6 col-lg-3" style="padding: 10px; background-color:#c6b4a6"> <h6 id="values" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif"></h6> </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        .no-copy p {
+            -webkit-user-select: none;  /* Chrome all / Safari all */
+            -moz-user-select: none;     /* Firefox all */
+            -ms-user-select: none;      /* IE 10+ */
+            user-select: none;          /* Likely future */
+        }
+    </style>
+
+
+
 
 </body>
 </html>
