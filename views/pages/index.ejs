@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>lt</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
 
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>
-    <script src="js/main.js"></script>
 
 
-    <button onclick="authenticate().then(loadClient)">authorize and load</button>
     <button onclick="hi()">hi</button>
+    <button onclick="authenticate().then(loadClient)">authorize and load</button>
     <button onclick="toggleClicked()" id="startstop">start</button>
     <button onclick="document.getElementById('times').innerHTML = ''; document.getElementById('values').innerHTML = ''">clear</button>
 
