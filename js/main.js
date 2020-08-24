@@ -2,7 +2,7 @@ var running = false;
 var waiting = false;
 
 var currentText;
-
+var authenticated = 0
 var data = [];
 var today = new Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -101,6 +101,7 @@ if (authenticated = 1) {
             console.error("Error signing in", err);
             document.getElementById("signin-text").innerHTML = "Error signing in";
             document.getElementById("signin-text").style.color = "red";
+            var authenticated = 0
         });
     }
 }
