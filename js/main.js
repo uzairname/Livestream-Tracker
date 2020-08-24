@@ -86,7 +86,7 @@ function load() {
 }
 
 function authenticate() {
-if (authenticated == "1") { 
+if (authenticated = "1") { 
             console.log("Already signed in!");
             document.getElementById("signin-text").innerHTML = "You are already signed in!";
             document.getElementById("signin-text").style.color = "red";
