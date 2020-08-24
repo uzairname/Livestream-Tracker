@@ -18,7 +18,7 @@ function updateButton(setRunning) {
     running = setRunning;
 
     document.getElementById("info-text").innerHTML = running ? "started" : "stopped";
-    document.getElementById("startstop").innerHTML = running ? "cancel" : "start";
+    document.getElementById("startstop").innerHTML = running ? "stop" : "start";
 }
 
 
@@ -73,7 +73,7 @@ function load() {
         gapi.auth2.init({client_id: "184134997783-hg6clikhn40ekh5jugqssma3nre9a03m.apps.googleusercontent.com"});
     });
 
-    document.getElementById("load-btn").innerHTML = "load successful";
+    document.getElementById("load-btn").innerHTML = "Loaded!";
 }
 
 function authenticate() {
