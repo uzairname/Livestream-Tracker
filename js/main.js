@@ -81,18 +81,24 @@ function load() {
 }
 
 function authenticate() {
-
+if (authenticated = 1) { 
+            console.log("Already signed in!");
+            document.getElementById("signin-text").innerHTML = "You are already signed in!";
+            document.getElementById("signin-text").style.color = "red";
+} else {
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
         .then(function() {
             console.log("Sign-in successful");
             document.getElementById("signin-text").innerHTML = "Sign in successful";
             document.getElementById("signin-text").style.color = "green";
+            var authenticated = 1
         }, function(err) {
             console.error("Error signing in", err);
             document.getElementById("signin-text").innerHTML = "Error signing in";
             document.getElementById("signin-text").style.color = "red";
         });
+    }
 }
 
 function loadClient() {
