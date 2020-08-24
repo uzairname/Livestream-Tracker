@@ -10,6 +10,7 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 var dateTime = date+' '+time;
 var i = 0;
 console.log("Last restarted: " + time);
+console.log("REMINDER FOR INIMICALPART: TIME ABOVE IS NOT THE TIME SINCE REBOOT, FIND OUT AND FIX ISSUE");
 
 //<<<<<<< HEAD
 
