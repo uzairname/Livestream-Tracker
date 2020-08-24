@@ -69,14 +69,14 @@ function run(from, timeInterval, totalTime) {
 }
 
 function load() {
-    gapi.load("client:auth2", function() {
+    return gapi.load("client:auth2", function() {
         gapi.auth2.init({client_id: "184134997783-hg6clikhn40ekh5jugqssma3nre9a03m.apps.googleusercontent.com"});
     });
 }
 
 function authenticate() {
 
-    gapi.auth2.getAuthInstance()
+    return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
         .then(function() {
             console.log("Sign-in successful");
