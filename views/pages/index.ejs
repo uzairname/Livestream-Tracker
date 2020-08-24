@@ -10,7 +10,7 @@
         <!--    <script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>-->
         <script type='text/javascript' src="main.js"></script>
 
-        <button onclick="load().then( authenticate().then(loadClient))">authorize and load</button>
+        <button onclick="load();  authenticate().then(loadClient)">authorize and load</button>
         <button onclick="toggleClicked()" id="startstop">start</button>
         <button onclick="document.getElementById('times').innerHTML = ''; document.getElementById('values').innerHTML = ''">clear</button>
 
