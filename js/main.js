@@ -69,7 +69,7 @@ function run(from, timeInterval, totalTime) {
 }
 
 function load() {
-    return gapi.load("client:auth2", function() {
+    gapi.load("client:auth2", function() {
         gapi.auth2.init({client_id: "184134997783-hg6clikhn40ekh5jugqssma3nre9a03m.apps.googleusercontent.com"});
     });
 }
