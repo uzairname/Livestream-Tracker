@@ -86,11 +86,11 @@ function load() {
 }
 
 function authenticate() {
-if (authenticated = "1") { 
-            console.log("Already signed in!");
-            document.getElementById("signin-text").innerHTML = "You are already signed in!";
-            document.getElementById("signin-text").style.color = "red";
-} else {
+//if (authenticated = "1") { 
+//            console.log("Already signed in!");
+//            document.getElementById("signin-text").innerHTML = "You are already signed in!";
+//            document.getElementById("signin-text").style.color = "red";
+//} else {
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
         .then(function() {
@@ -104,7 +104,7 @@ if (authenticated = "1") {
             document.getElementById("signin-text").style.color = "red";
             var authenticated = 0
         });
-    }
+//    }
 }
 
 function loadClient() {
