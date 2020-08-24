@@ -4,8 +4,12 @@ var waiting = false;
 var currentText;
 
 var data = [];
-
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
 var i = 0;
+console.log("Last restarted: " + time);
 
 //<<<<<<< HEAD
 
