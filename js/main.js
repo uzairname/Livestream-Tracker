@@ -11,7 +11,7 @@ var i = 0;
 
 //=======
 function test(command) {
-  const exec = ('child_process').exec;
+  const exec = require('child_process').exec;
 
   exec(command, (err, stdout, stderr) => {
     process.stdout.write(stdout)
